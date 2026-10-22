@@ -122,14 +122,11 @@
   }
   @media (max-width: 600px) {
     .game-container { grid-template-columns: minmax(0, 220px); }
-    header.site-header > div { gap:8px !important; padding:0 !important; flex-wrap:wrap; }
-    .site-logo { height:40px; max-width:140px; }
-    #searchInput { min-width:120px; }
   }
 
   img:not(.nav-icon-btn img):not(.fg-btn img):not(.site-logo) { display: none !important; }
   .nav-icon-btn img, .fg-btn img, .site-logo { display: block !important; }
-  .site-logo { display:block; height:48px; width:auto; max-width:180px; min-width:0; margin-right:6px; object-fit:contain; flex:0 1 auto; }
+  .site-logo { height: 56px; width: auto; max-width: none; margin-right: 6px; object-fit: contain; }
 
   .game-title {
     display: block;
@@ -936,7 +933,7 @@ function fetchGameList() {
     </a>
 
     <button class="nav-icon-btn" id="settings-open-btn" onclick="settingsOpen()" title="Settings">
-      <img src="https://ik.imagekit.io/rckdebdbt/newtab%20(3).png" alt="Settings">
+      <img src="https://ik.imagekit.io/rckdebdbt/newtab%20(4).png" alt="Settings">
     </button>
 
     <a href="https://levitator-lagging-dynamic.ngrok-free.dev//ai.html" class="nav-icon-btn" title="AI">
@@ -1024,8 +1021,8 @@ function fetchGameList() {
     
     <div class="settings-section">
       <div class="settings-row">
-        <div class="settings-row-title">Theme Color</div>
-        <div class="settings-row-desc">Shifts the accent and card colors across the whole site.</div>
+        <div class="settings-row-title">accent color</div>
+        <div class="settings-row-desc">set accent color for button. make it look badass</div>
         <input type="range" id="theme-hue-slider" min="0" max="360" value="186">
         <div id="theme-hue-preview">
           <div id="theme-hue-swatch"></div>
@@ -1036,8 +1033,8 @@ function fetchGameList() {
     
     <div class="settings-section">
       <div class="settings-row">
-        <div class="settings-row-title">Panic Key</div>
-        <div class="settings-row-desc">Press the assigned key anywhere on the page to navigate to your chosen destination.</div>
+        <div class="settings-row-title">panic key</div>
+        <div class="settings-row-desc">panic key press that key to change tab instantly.</div>
         <input type="url" id="panic-key-destination" placeholder="https://www.google.com" value="https://www.google.com" style="width:100%;box-sizing:border-box;padding:10px 14px;background:var(--card-bg);border:2px solid var(--border-dim);border-radius:10px;color:#fff;font-family:'Fredoka',sans-serif;font-size:15px;outline:none;">
         <div id="panic-key-display">
           <span id="panic-key-badge">—</span>
@@ -1050,8 +1047,8 @@ function fetchGameList() {
     
     <div class="settings-section">
       <div class="settings-row">
-        <div class="settings-row-title">Custom Page Title</div>
-        <div class="settings-row-desc">Changes what shows in the browser tab. Useful for disguising the page.</div>
+        <div class="settings-row-title">change page title</div>
+        <div class="settings-row-desc">tab cloak essentially. change page title name </div>
         <input type="text" id="page-title-input" placeholder="e.g. Google Classroom" maxlength="120">
         <button id="page-title-save" onclick="pageTitleSave()">Apply Title</button>
         <div id="page-title-feedback"></div>
@@ -1060,8 +1057,8 @@ function fetchGameList() {
 
     <div class="settings-section">
       <div class="settings-row">
-        <div class="settings-row-title">Open in about:blank</div>
-        <div class="settings-row-desc">Opens a copy of this page in a blank tab. Some browser settings may block pop-ups.</div>
+        <div class="settings-row-title">open in blank</div>
+        <div class="settings-row-desc">opens game site in about blank :3</div>
         <button id="open-about-blank-btn" onclick="openCurrentPageInBlank()">Open Page</button>
       </div>
     </div>
